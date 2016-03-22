@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Past Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Workout</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @past_logs.each do |past_log| %>
+      <tr>
+        <td><%= past_log.Workout %></td>
+        <td><%= past_log.Date %></td>
+        <td><%= link_to 'Show', past_log %></td>
+        <td><%= link_to 'Edit', edit_past_log_path(past_log) %></td>
+        <td><%= link_to 'Destroy', past_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Past log', new_past_log_path %>

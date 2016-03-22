@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Workout:</strong>
+  <%= @past_log.Workout %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @past_log.Date %>
+</p>
+
+<%= link_to 'Edit', edit_past_log_path(@past_log) %> |
+<%= link_to 'Back', past_logs_path %>
